@@ -1,0 +1,55 @@
+BÀI TEST FULLSTACK DEVELOPER
+Công nghệ: Node.js + Express + MongoDB + Frontend tự do
+
+
+I.	Mục tiêu
+Bài test nhằm đánh giá khả năng xây dựng một hệ thống web cơ bản, bao gồm xác thực người dùng, phân quyền, CRUD dữ liệu và tổ chức code backend hợp lý.
+II.	Yêu cầu công nghệ
+1	Backend: Node.js v22, Express.js, JavaScript
+2	Database: MongoDB (chạy localhost, không dùng cloud)
+3	Frontend: Tự do lựa chọn (React, Vue, HTML/CSS/JS...) ưu tiên react hoặc next
+4	Sử dụng JWT cho xác thực
+III.	Chức năng bắt buộc
+A.	Login
+1	Chỉ có chức năng đăng nhập (không có đăng ký)
+2	Đăng nhập bằng username và password
+3	Password phải được mã hóa (bcrypt)
+4	Đăng nhập thành công trả về JWT
+5	Block IP 30s nếu login sai nhiều lần
+6	Access token hết hạn sau 2 phút
+B.	Menu hệ thống
+1	Quản lý User
+2	Setting
+User gồm các thuộc tính:
+1	id
+2	username
+3	password
+4	email
+5	phone
+6	address
+7	date of birth
+8	role (lv1, lv2, lv3)
+CRUD User với phân quyền:
+1	lv1: chỉ được xem danh sách user
+2	lv2: xem, tạo, chỉnh sửa user
+3	lv3: toàn quyền CRUD + truy cập Setting
+
+C. Trang seting
+                1 cho phép tùy chỉnh time block IP
+                2 cho phép tùy chỉnh time Access token
+                3 change pass acount admin
+
+
+
+IV.	Yêu cầu kỹ thuật
+1	Tổ chức code rõ ràng (routes, controllers, models, middlewares)
+2	Response API theo chuẩn REST
+3	Xử lý lỗi tập trung (error middleware)
+4	Sử dụng HTTP Status Code đúng
+V.	Bonus (không bắt buộc)
+1	Tìm kiếm, phân trang user
+2	Ghi log login và thao tác CRUD
+3	Docker hóa project ( điểm cộng) 
+VI.	Kết quả nộp bài
+1	Source code (GitHub hoặc file nén)
+2	File README hướng dẫn chạy project
